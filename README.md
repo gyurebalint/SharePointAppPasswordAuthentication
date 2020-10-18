@@ -4,10 +4,11 @@ This library provides an extension method for a ClientContext instance which arg
 
 ## How to use it
 '''cs
- static void Main(string[] args)
+
+        static void Main(string[] args)
         {
-            using (ClientContext context = new ClientContext("Your SharePoint site's URL here").GetAppPasswordAuthenticatedContext("Your UserName", "Your App Password")) 
-                {
+            using (ClientContext context = new ClientContext("Your SharePoint site's URL here").GetAppPasswordAuthenticatedContext("Your UserName", "Your Password")) 
+            {
                 
                 context.Load(context.Web);
 
