@@ -130,9 +130,6 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="OfficeDevPnP.Core, Version=3.26.2010.0, Culture=neutral, PublicKeyToken=5e633289e95c321a, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharePointPnPCoreOnline.3.26.2010\lib\net461\OfficeDevPnP.Core.dll</HintPath>
-    </Reference>
     <Reference Include="SharePointPnP.IdentityModel.Extensions, Version=1.2.4.0, Culture=neutral, PublicKeyToken=5e633289e95c321a, processorArchitecture=MSIL">
       <HintPath>..\packages\SharePointPnP.IdentityModel.Extensions.1.2.4\lib\net45\SharePointPnP.IdentityModel.Extensions.dll</HintPath>
     </Reference>

@@ -1,5 +1,4 @@
 ﻿using Microsoft.SharePoint.Client;
-using OfficeDevPnP.Core.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,6 @@ namespace SharePointAuthentication
     {
         static void Main(string[] args)
         {
-            var cred = CredentialManager.GetCredential("DrawingRegistryAccess");
             using (ClientContext context = new ClientContext("Your SharePoint site's URL here").GetAppPasswordAuthenticatedContext("Your UserName", "Your Password")) 
             {
                 
