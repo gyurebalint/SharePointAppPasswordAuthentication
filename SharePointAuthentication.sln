@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharePointAuthentication", "SharePointAuthentication\SharePointAuthentication.csproj", "{CEC42FBE-CC4D-451B-ABD9-CED6248D9C91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEC42FBE-CC4D-451B-ABD9-CED6248D9C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC42FBE-CC4D-451B-ABD9-CED6248D9C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC42FBE-CC4D-451B-ABD9-CED6248D9C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC42FBE-CC4D-451B-ABD9-CED6248D9C91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51F19305-E8E1-4586-B7A8-5F8936880908}
+	EndGlobalSection
+EndGlobal
