@@ -3,11 +3,11 @@
 This library provides an extension method for a ClientContext instance which arguments are your SharePoint username and your [SharePoint App Password](https://docs.microsoft.com/en-us/azure/active-directory/user-help/multi-factor-authentication-end-user-app-passwords).
 
 ## How to use it
-'''C#
+'''C# \n
  static void Main(string[] args)
         {
             using (ClientContext context = new ClientContext("Your SharePoint site's URL here").GetAppPasswordAuthenticatedContext("Your UserName", "Your App Password")) 
-            {
+                {
                 
                 context.Load(context.Web);
 
