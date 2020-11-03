@@ -40,3 +40,5 @@ In the library I kept the 'Program.cs' class for you, so if you want to test it,
 
 credit: Goes out to [Wictor Wilen](https://www.wictorwilen.se/blog/how-to-do-active-authentication-to-office-365-and-sharepoint-online/)
 Check out his blog, and the article on which I founded this extension method.
+
+Write me at: gyurebalint@gmail.com
