@@ -11,18 +11,19 @@ After adding the package **SharePointPnPCoreOnline**, I instantiated the *Authen
 I tried to give the username and password in a form of the SharePointOnlineCredentials class, but the error message 'Unauthorized', or that I cannot use the SharePointOnlineCredentials alltogether. Every article I read said I either have to turn the *legacyprotocols* enabled or register an app on SharePoint or on Azure.
 
 Now, registering an app with SharePoint had its drawbacks, because if you do this, than any change made by your application will be created by your application. So when you take a look at one of your lists, add an item, the 'Created by' column will say your username, since you are the one who added that item. Now if a SharePoint registered application would have added that item, the 'Created by' column would show your applications name. This isn't good, every addition every change has to be tracked for future reference. (Who, what, when something happened).
-The alternate way is to register an app on Azure, which really is a pain unless you know what you are doing, plus if you aren't the administrator, convincing your superiors who don't code to register an app and do this and that, is not going to be easy.
+The alternate way is to register an app on Azure, convincing your superiors who don't code to register an app and do this and that, is not going to be easy.
 
 ### Solution
 Finally I found a solution which uses SharePoint App Passwords, which I can create on my own, it is a valid authentication which I can use programmatically. It is a substitute of the two-step authentication. It turned out that with the previously mentioned *GetWebLoginClientContext* method's requests didn't bring back the necessary cookies for authentication. I couldn' get around that, so I searched some more and found a guy that wrote the MsOnlineClaimsHelper class, his name is [Wictor Wilen](https://www.wictorwilen.se/blog/how-to-do-active-authentication-to-office-365-and-sharepoint-online/) you can read his blogpost about the problem and solution
-I only abstracted away the necessary classes and created an extension method for the ClientContext object.
+I abstracted away the necessary classes and created an extension method for the ClientContext object.
 This way I generated SharePoint App Passwords for all of my designers, created a generic credential in Windows's Credential Managers to save the password and username safely on their computers, and they could authenticate as themselves, this way everyone manages their own changes in SharePoint lists and everything can be tracked.
 
 ### How to use it
 
         static void Main(string[] args)
         {
-            using (ClientContext context = new ClientContext("Your SharePoint site's URL here").GetAppPasswordAuthenticatedContext("Your UserName", "Your Password")) 
+            using (ClientContext context = new ClientContext("Your SharePoint site's URL here")
+                .GetAppPasswordAuthenticatedContext("Your UserName", "Your Password")) 
             {
                 
                 context.Load(context.Web);
